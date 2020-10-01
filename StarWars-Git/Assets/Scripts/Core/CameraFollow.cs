@@ -6,7 +6,14 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     [SerializeField] GameObject spaceShip;
- private void LateUpdate()
+    [SerializeField] private int playSong;
+
+    private void Start()
+    {
+        FindObjectOfType<AudioManager>().PlaySong(playSong);
+    }
+
+    private void LateUpdate()
     {
         this.transform.position = spaceShip.transform.position;
     }

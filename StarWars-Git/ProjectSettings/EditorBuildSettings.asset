@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: e53e16c689f274e41817c5d67233090e
+  - enabled: 1
+    path: Assets/Scenes/Asteroid Dodge.unity
+    guid: 9b058f2931ad9444698d9c006dd4e8e3
+  - enabled: 1
+    path: Assets/Scenes/Flight Simulation.unity
+    guid: 6e8f9fa3f8fe89f46b3acf0d9fa92a58
+  - enabled: 1
+    path: Assets/Scenes/Space Bugs.unity
+    guid: 09142fe6029b3be4fa06a1e5b9223ed7
   m_configObjects: {}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8312552398270202406}
   - component: {fileID: 1696437971119526966}
   - component: {fileID: 3046444649586013142}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Asteroid Lava Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}

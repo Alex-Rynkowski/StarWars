@@ -54,6 +54,11 @@
             <e p="PlayerGuns.cs" t="Include" />
             <e p="SpaceShipController.cs" t="Include" />
           </e>
+          <e p="Saving" t="Include">
+            <e p="Levels.cs" t="Include" />
+            <e p="PlayerData.cs" t="Include" />
+            <e p="Saving.cs" t="Include" />
+          </e>
         </e>
         <e p="Store Assets" t="Include">
           <e p="GalaxyBox2" t="Include">

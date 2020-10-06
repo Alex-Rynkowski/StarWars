@@ -6,17 +6,16 @@ using UnityEngine;
 public class PlayerGuns : MonoBehaviour
 {
     public GameObject bullet;
-    [SerializeField] private GameObject leftGun;
-    [SerializeField] private GameObject rightGun;
+    [SerializeField] GameObject leftGun;
+    [SerializeField] GameObject rightGun;
 
     private bool spawnAt = false;
-    private Vector3 positions;
     private float shootTimer = 0;
 
     private void Update()
     {
         this.shootTimer += Time.deltaTime;
-        if (Input.GetKey(KeyCode.Space) && this.shootTimer >= .1)
+        if (Input.GetMouseButton(0) && this.shootTimer >= .1)
         {
             Shoot();
             shootTimer = 0;

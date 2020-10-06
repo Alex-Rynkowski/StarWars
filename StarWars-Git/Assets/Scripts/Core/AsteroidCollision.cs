@@ -1,9 +1,11 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class AsteroidCollision : MonoBehaviour
 {
     private LayerMask asteroidLayer;
     private HealthDisplay healthDisplay;
+
     private void Start()
     {
         this.asteroidLayer = LayerMask.GetMask("Asteroid");

@@ -7,23 +7,25 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject[] enemies;
 
     private float spawnCounter = 0;
+    private Container container;
 
     [Header("Components")] private BoxCollider boxCollider;
 
-    private SpaceShipController spaceShipController;
+    [SerializeField] SpaceShipController spaceShipController;
 
     private void Start()
     {
         boxCollider = GetComponent<BoxCollider>();
-        spaceShipController = FindObjectOfType<SpaceShipController>();
+        container = FindObjectOfType<Container>();
     }
 
     private void Update()
     {
+        if (spaceShipController == null || !container.inPlayMode) return;
         var position = spaceShipController.transform.position;
         this.transform.position = new Vector3(position.x, position.y, position.z + 40);
         spawnCounter += Time.deltaTime;
-        
+
         if (spawnCounter >= spawnTimer)
         {
             var bounds = boxCollider.bounds;

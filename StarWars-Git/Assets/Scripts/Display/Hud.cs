@@ -9,38 +9,112 @@ using UnityEngine.UI;
 public class Hud : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI scoreText;
-    [SerializeField] Text countDownText;
-    [SerializeField] float countDown;
-    
-    [Header("Components")] 
-    SpaceShipController spaceShipController;
-    Container container;
+    [SerializeField] SpaceShipController spaceShipController;
+    public GameObject gameoverScreen; //activates through the Health script
+
+    [Header("Buttons")] [SerializeField] Button startGameBtn;
+    [SerializeField] GameObject pauseMenu;
+
+    [Header("Components")] Container container;
 
     private void Start()
     {
-        spaceShipController = FindObjectOfType<SpaceShipController>();
         container = FindObjectOfType<Container>();
+        spaceShipController.gameObject.SetActive(false);
+        startGameBtn.gameObject.SetActive(true);
+        pauseMenu.SetActive(false);
+        gameoverScreen.SetActive(false);
     }
 
     private void Update()
     {
-        scoreText.text = string.Format("Score: {0:0}", container.score);
-        
-        if (container.paused)
+        if (Input.GetKeyUp(KeyCode.Escape) && !pauseMenu.activeInHierarchy &&
+            !startGameBtn.gameObject.activeInHierarchy)
         {
-            spaceShipController.SetVelocity(new Vector3(0,0,0));
-        }
-            
-        if (!container.inPlayMode && countDownText.isActiveAndEnabled)
-        {
-            countDown -= Time.deltaTime;
-            countDownText.text = countDown.ToString("0");
+            EnemyActivation(false);
+            FreezeBullets(true);
+            Cursor.visible = true;
+            spaceShipController.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            container.inPlayMode = false;
+            pauseMenu.SetActive(true);
+            return;
         }
 
-        if (countDown <= 0 && !container.inPlayMode && !container.paused)
+        if (Input.GetKeyUp(KeyCode.Escape) && pauseMenu.activeInHierarchy &&
+            !startGameBtn.gameObject.activeInHierarchy)
         {
-            countDownText.enabled = false;
-            container.inPlayMode = true;
+            ResumeGame();
+            return;
+        }
+
+        scoreText.text = string.Format("Score: {0:0}", container.score);
+
+        if (container.paused)
+        {
+            spaceShipController.SetVelocity(new Vector3(0, 0, 0));
+        }
+    }
+
+    public void StartGame()
+    {
+        startGameBtn.gameObject.SetActive(false);
+        container.inPlayMode = true;
+        spaceShipController.gameObject.SetActive(true);
+        Cursor.visible = false;
+    }
+
+    public void ActivateWindow(GameObject windowToActivate)
+    {
+        windowToActivate.SetActive(true);
+    }
+
+    public void DeActivateWindow(GameObject windowToActivate)
+    {
+        windowToActivate.SetActive(false);
+    }
+
+    public void ResumeGame()
+    {
+        Cursor.visible = false;
+        spaceShipController.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+        container.inPlayMode = true;
+        pauseMenu.SetActive(false);
+        EnemyActivation(true);
+        FreezeBullets(false);
+    }
+
+    private void EnemyActivation(bool shouldActivateEnemies)
+    {
+        foreach (var enemy in FindObjectsOfType<Enemy>())
+        {
+            if (shouldActivateEnemies)
+            {
+                enemy.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            }
+            else
+            {
+                enemy.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            }
+
+            foreach (var script in enemy.GetComponentsInChildren<MonoBehaviour>())
+            {
+                script.enabled = shouldActivateEnemies;
+            }
+        }
+    }
+
+    private void FreezeBullets(bool shouldFreezeBullets)
+    {
+        foreach (var bullet in FindObjectsOfType<Bullet>())
+        {
+            if (shouldFreezeBullets)
+            {
+                bullet.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            }
+            else
+            {
+                bullet.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+            }
         }
     }
 }

@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Collections;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Health : MonoBehaviour, IActivateScreenShake
 {
     [SerializeField] public float maxHealth = 100;
-    [SerializeField] private float currentHealth = 0;
+    [SerializeField] float currentHealth = 0;
 
     private float timer;
     private ActivateScreenShake activateScreenShake;
@@ -14,14 +15,15 @@ public class Health : MonoBehaviour, IActivateScreenShake
     private Container container;
     private GameOver gameOver;
     private CanvasGroup canvasGroup;
+    private Hud hud;
+
     private void Start()
     {
         this.playerLayerMask = LayerMask.GetMask("Player");
         this.currentHealth = maxHealth;
         this.container = FindObjectOfType<Container>();
         this.activateScreenShake = FindObjectOfType<ActivateScreenShake>();
-        this.gameOver = FindObjectOfType<GameOver>();
-        this.canvasGroup = gameOver.GetComponent<CanvasGroup>();
+        this.hud = FindObjectOfType<Hud>();
     }
 
     private void Update()
@@ -32,13 +34,14 @@ public class Health : MonoBehaviour, IActivateScreenShake
         }
         else if ((1 << this.gameObject.layer) == playerLayerMask && CurrentHealth() <= 0)
         {
-            container.gameOver = true;
+            hud.gameoverScreen.SetActive(true);
+            this.gameOver = FindObjectOfType<GameOver>();
+            this.canvasGroup = gameOver.GetComponent<CanvasGroup>();
+            this.container.wingTag = this.gameObject.tag;
+            this.container.gameOver = true;
             this.canvasGroup.interactable = true;
             this.gameOver.enabled = true;
-
         }
-        
-        
     }
 
     public float CurrentHealth()
@@ -50,10 +53,9 @@ public class Health : MonoBehaviour, IActivateScreenShake
     {
         if ((1 << this.gameObject.layer) == playerLayerMask)
         {
-            
             activateScreenShake.Activator(this);
         }
-        
+
         return this.currentHealth -= damage;
     }
 

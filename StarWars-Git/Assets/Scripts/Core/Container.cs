@@ -8,4 +8,5 @@ public class Container : MonoBehaviour
     public bool gameOver = false;
     public bool inPlayMode = false;
     public bool paused = false;
+    public string wingTag;
 }

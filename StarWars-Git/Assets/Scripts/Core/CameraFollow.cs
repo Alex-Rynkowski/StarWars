@@ -10,7 +10,7 @@ public class CameraFollow : MonoBehaviour
 
     private void Start()
     {
-        FindObjectOfType<AudioManager>().PlaySong(playSong);
+        //FindObjectOfType<AudioManager>().MusicToPlay(playSong);
     }
 
     private void LateUpdate()

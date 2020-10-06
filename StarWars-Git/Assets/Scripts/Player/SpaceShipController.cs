@@ -23,7 +23,6 @@ public class SpaceShipController : MonoBehaviour
     private void Start()
     {
         container = FindObjectOfType<Container>();
-        Cursor.visible = false;
         rb = GetComponent<Rigidbody>();
         camera = Camera.main;
     }

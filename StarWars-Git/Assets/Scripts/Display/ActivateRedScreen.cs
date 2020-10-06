@@ -6,9 +6,9 @@ public class ActivateRedScreen : MonoBehaviour, IActivateScreenShake
 {
     [SerializeField] private CanvasGroup redScreen;
     [SerializeField] private float activationTimer = 1;
-    
+
     private ActivateScreenShake activateScreenShake;
-    
+
     private void Update()
     {
         StartCoroutine(DisplayRedScreen());
@@ -27,8 +27,11 @@ public class ActivateRedScreen : MonoBehaviour, IActivateScreenShake
 
     private void OnDisable()
     {
-        redScreen.alpha = 0;
-        activateScreenShake.Activator(this);
+        if (redScreen != null)
+        {
+            redScreen.alpha = 0;
+            activateScreenShake.Activator(this);
+        }
     }
 
     IEnumerator DisplayRedScreen()

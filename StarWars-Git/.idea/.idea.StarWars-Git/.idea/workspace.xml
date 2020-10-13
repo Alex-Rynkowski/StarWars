@@ -21,32 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d8c62c45-7576-411c-8426-441afb61398c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.StarWars-Git/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StarWars-Git/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.StarWars-Git/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StarWars-Git/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.StarWars-Git/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StarWars-Git/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Core.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Core.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy Bullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Flying Insect.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Flying Insect.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Hud.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Hud.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Playmode Objects.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Playmode Objects.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Asteroid Dodge.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Asteroid Dodge.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Space Bugs.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Space Bugs.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/AsteroidCollision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/AsteroidCollision.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/AudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/CameraFollow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/CameraFollow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/CameraMainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/CameraMainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Container.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Container.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/GameOver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/GameOver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Health.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Display/ActivateRedScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Display/ActivateRedScreen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Display/Hud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Display/Hud.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyBullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyBullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemySpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerGuns.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerGuns.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/SpaceShipController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/SpaceShipController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,10 +32,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Saving/Levels.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Saving/PlayerData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Predator-Escape/Predator Escape/Assets/Programming/Core/AudioManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://D:/Simple Platform Game 2D/Assets/Scripts/Core/AudioManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Saving/Levels.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -82,8 +55,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/GameOver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemySpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Display/Hud.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/SpaceShipController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyBullet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/SpaceShipController.cs" />
       </list>
     </option>
   </component>
@@ -99,6 +72,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -137,6 +111,9 @@
       <workItem from="1601799033507" duration="2303000" />
       <workItem from="1601826847325" duration="3492000" />
       <workItem from="1601834666962" duration="1900000" />
+      <workItem from="1602600969871" duration="12000" />
+      <workItem from="1602601011923" duration="154000" />
+      <workItem from="1602601309805" duration="118000" />
     </task>
     <servers />
   </component>
@@ -225,6 +202,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="375" key="GridCell.Tab.3.right/0.0.1920.1040/1920.0.1920.1040/-1920.0.1920.1040@1920.0.1920.1040" timestamp="1601759469056" />
+    <state x="341" y="138" key="SettingsEditor" timestamp="1602601426859">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state x="341" y="138" key="SettingsEditor/0.23.1680.952@0.23.1680.952" timestamp="1602601426859" />
     <state x="2012" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1601741662123">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>

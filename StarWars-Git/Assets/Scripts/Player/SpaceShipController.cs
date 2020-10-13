@@ -3,12 +3,12 @@
 public class SpaceShipController : MonoBehaviour
 {
     [Header("Raycast adjustments")] [SerializeField]
-    private float rayAdjustmentYPosition;
+    float rayAdjustmentYPosition;
 
     [Header("Space ship adjustments")] [SerializeField]
-    private float forceMagnitude = 1;
-    [SerializeField] private float maxYRotation;
-    [SerializeField] private float rotationMagnitudeZAxis;
+    float forceMagnitude = 1;
+    [SerializeField] float maxYRotation;
+    [SerializeField] float rotationMagnitudeZAxis;
 
     [Header("Components")] 
     Container container;
@@ -20,14 +20,14 @@ public class SpaceShipController : MonoBehaviour
     float currentZRot;
     [HideInInspector] public Vector3 rayEndPoint;
 
-    private void Start()
+    void Start()
     {
         container = FindObjectOfType<Container>();
         rb = GetComponent<Rigidbody>();
         camera = Camera.main;
     }
 
-    private void Update()
+    void Update()
     {
         if (!container.inPlayMode) return;
 
@@ -41,7 +41,7 @@ public class SpaceShipController : MonoBehaviour
 
     #region Ray casting
 
-    private void FollowMousePosition()
+    void FollowMousePosition()
     {
         var ray = camera.ScreenPointToRay(Input.mousePosition);
         rayEndPoint = ray.origin + ray.direction * 70; //used in wave spawner script
@@ -59,12 +59,12 @@ public class SpaceShipController : MonoBehaviour
             currentZRot);
     }
 
-    private void KeepZAxisRotationStedy(Quaternion lookRot)
+    void KeepZAxisRotationStedy(Quaternion lookRot)
     {
         this.transform.rotation = Quaternion.AngleAxis(0, Vector3.up * forceMagnitude) * lookRot;
     }
 
-    private Ray SetYRotationLimit(Quaternion lookRot, Ray ray)
+    void SetYRotationLimit(Quaternion lookRot, Ray ray)
     {
         if (Quaternion.Angle(Quaternion.Euler(transform.eulerAngles.x, 0, transform.eulerAngles.z), lookRot) >
             maxYRotation && lookRot.y > 0)
@@ -96,7 +96,6 @@ public class SpaceShipController : MonoBehaviour
                 ray.direction.z) * this.forceMagnitude);
         }
 
-        return ray;
     }
 
     public void SetVelocity(Vector3 velocity)
